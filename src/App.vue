@@ -1,12 +1,18 @@
-<script setup>
+<script>
 	import Header from './components/Header.vue'
 	import Footer from './components/Footer.vue'
+	export default {
+		components: { Header, Footer },
+	}
 </script>
 
 <template>
 	<Header />
-	<main></main>
+	<main><RouterView></RouterView></main>
 	<Footer />
 </template>
 
-<style scoped></style>
+<style scoped>
+	main {
+	}
+</style>

@@ -7,8 +7,13 @@
 :root {
 	--color-text: white;
 	--color-bg: black;
-	/* font-size: auto; */
+	font-size: auto;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+	--phone: 380px;
+	--tablet: 768px;
+	--laptop: 1120px;
+	--large: 1440px;
 }
 
 html,
@@ -16,4 +21,10 @@ body {
 	min-height: 100vh;
 	background: var(--color-bg);
 	color: var(--color-text);
+}
+
+@media (max-width: var(--tablet)) {
+	:root {
+		font-size: 12px;
+	}
 }
