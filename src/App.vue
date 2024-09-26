@@ -3,9 +3,12 @@
 <template>
 	<img class="bg" src="/public/assets/hero.png" alt="" />
 	<header class="k2d-300">
-		Для замовлення та консультацій: +38 (099) 6 800 900; +38 (097) 6 800 900;
-		+38 (073) 6 800 901
+		<div class="content">
+			Для замовлення та консультацій: +38 (099) 6 800 900; +38 (097) 6 800 900;
+			+38 (073) 6 800 901
+		</div>
 	</header>
+	
 	<main>
 		<section class="content border-gradient">
 			<nav>

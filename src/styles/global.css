@@ -12,6 +12,12 @@ html {
 	overflow-x: hidden;
 	position: relative;
 }
+.content {
+	width: clamp(180px, 95%, 1222px);
+	margin: 1.5rem auto;
+
+	background-color: white;
+}
 
 main {
 	position: relative;
@@ -22,21 +28,21 @@ main {
 	gap: 2rem;
 }
 header {
-	position: fixed;
-	left: 0px;
-	top: 0px;
+	position: relative;
+
+	height: 60px;
+	color: white;
+	font-size: 0.9rem;
+	line-height: 1rem;
+	padding: 1rem;
+	z-index: 10;
+	background: rgba(34, 28, 231, 1);
+}
+header .content {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: 60px;
-	color: white;
-	position: relative;
-	font-size: 0.9rem;
-	line-height: 1rem;
-	background: rgba(34, 28, 231, 1);
-	padding: 1rem;
-	z-index: 10;
+	background: rgba(34, 28, 231, 1) !important;
 }
 
 .bg {
@@ -50,19 +56,12 @@ header {
 	object-position: center;
 }
 
-.content {
-	width: clamp(180px, 95%, 1222px);
-	margin: 1.5rem auto;
-
-	background-color: white;
-}
-
 nav {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
 	width: clamp(200px, 100%, 1222px);
-	padding: max(2%, 16px) 4rem;
+	padding: max(2%, 16px) max(10%, 3rem);
 }
 
 .nav_header {
@@ -78,17 +77,17 @@ nav {
 
 /* for buttons */
 .nav_links {
-	display: flex;
+	display: grid;
 	gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
-	flex-wrap: wrap;
 }
 
 .nav_links a {
 	display: block;
 	width: 100%;
 	height: 100%;
-	max-width: clamp(150px, 30%, 350px);
+	max-width: clamp(150px, 100%, 350px);
 	text-decoration: none;
 }
 
@@ -122,12 +121,21 @@ button img {
 	:root {
 		font-size: 10px;
 	}
-	h1 {
-		text-align: left !important;
+	.nav_links {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 	}
 	.nav_links a:first-child {
-		max-width: 100%;
-		width: 100%;
+		grid-column: span 3 / span 3;
+		grid-row-start: 1;
+		max-width: none;
+	}
+	.nav_links a {
+		grid-row-start: 2;
+	}
+
+	h1 {
+		text-align: left !important;
 	}
 
 	@media (max-width: 420px) {
