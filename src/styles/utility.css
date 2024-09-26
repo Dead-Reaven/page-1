@@ -1,5 +1,47 @@
-.content {
-	max-width: 600px;
-	margin: 0px auto;
-	padding: 0.5rem 2rem;
+.color-blue {
+	color: rgba(88, 168, 237, 1);
+}
+
+.red {
+	color: white;
+	background-color: #ff3e2f;
+	border: 1px solid rgba(82, 74, 212, 1);
+}
+.active-red {
+	background-color: inherit;
+	color: #524ad4;
+	border: 1px solid rgba(82, 74, 212, 1) !important;
+}
+
+.green {
+	color: white;
+	background: rgb(83, 171, 175);
+	background: radial-gradient(
+		circle,
+		rgba(83, 171, 175, 1) 0%,
+		rgba(116, 214, 176, 1) 52%,
+		rgba(83, 171, 175, 1) 100%
+	);
+	border: 1px solid inherit;
+}
+.violet {
+	color: white;
+	background: rgb(98, 89, 232);
+	background: -moz-linear-gradient(
+		0deg,
+		rgba(98, 89, 232, 1) 0%,
+		rgba(132, 126, 236, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		0deg,
+		rgba(98, 89, 232, 1) 0%,
+		rgba(132, 126, 236, 1) 100%
+	);
+	background: linear-gradient(
+		0deg,
+		rgba(98, 89, 232, 1) 0%,
+		rgba(132, 126, 236, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6259e8",endColorstr="#847eec",GradientType=1);
+	border: 1px solid inherit;
 }

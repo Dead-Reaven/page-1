@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300;400;700;800&family=Londrina+Solid&family=Monda:wght@400..700&display=swap');
+
+.londrina-solid-400 {
+	font-family: 'Londrina Solid', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.monda-700 {
+	font-family: 'Monda', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.k2d-300 {
+	font-family: 'K2D', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.k2d-400 {
+	font-family: 'K2D', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.k2d-700 {
+	font-family: 'K2D', sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.k2d-800 {
+	font-family: 'K2D', sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* typography */
+h1 {
+	font-family: 'K2D', sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	font-size: min(calc(1% + 1.9rem), 45px);
+	line-height: min(calc(1% + 1.9rem), 45px);
+	text-align: center;
+}

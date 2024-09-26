@@ -1,0 +1,52 @@
+.border-gradient {
+	background: radial-gradient(
+				circle at 100% 100%,
+				#ffffff 0,
+				#ffffff 1px,
+				transparent 0.5px
+			)
+			0% 0%/8px 8px no-repeat,
+		radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 1px, transparent 1px)
+			100% 0%/8px 8px no-repeat,
+		radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 1px, transparent 1px)
+			0% 100%/8px 8px no-repeat,
+		radial-gradient(circle at 0 0, #ffffff 0, #ffffff 1px, transparent 1px) 100%
+			100%/8px 8px no-repeat,
+		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px)
+			calc(100% - 16px) no-repeat,
+		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 16px)
+			calc(100% - 10px) no-repeat,
+		linear-gradient(0deg, #ffffff 0%, #5e0691 100%);
+}
+
+.red {
+	background-color: #ff3e2f;
+}
+.green {
+	background: rgb(83, 171, 175);
+	background: radial-gradient(
+		circle,
+		rgba(83, 171, 175, 1) 0%,
+		rgba(116, 214, 176, 1) 52%,
+		rgba(83, 171, 175, 1) 100%
+	);
+}
+.violet {
+	background: rgb(98, 89, 232);
+	background: -moz-linear-gradient(
+		0deg,
+		rgba(98, 89, 232, 1) 0%,
+		rgba(132, 126, 236, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		0deg,
+		rgba(98, 89, 232, 1) 0%,
+		rgba(132, 126, 236, 1) 100%
+	);
+	background: linear-gradient(
+		0deg,
+		rgba(98, 89, 232, 1) 0%,
+		rgba(132, 126, 236, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6259e8",endColorstr="#847eec",GradientType=1);
+}
