@@ -34,16 +34,16 @@
 	background: radial-gradient(
 				circle at 100% 100%,
 				#ffffff 0,
-				#ffffff 25px,
-				transparent 25px
+				#ffffff 27px,
+				transparent 27px
 			)
-			0% 0%/30px 30px no-repeat,
-		radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 25px, transparent 25px)
-			100% 0%/30px 30px no-repeat,
-		radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 25px, transparent 25px)
-			0% 100%/30px 30px no-repeat,
-		radial-gradient(circle at 0 0, #ffffff 0, #ffffff 25px, transparent 25px)
-			100% 100%/30px 30px no-repeat,
+			0% 0%/32px 32px no-repeat,
+		radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 27px, transparent 27px)
+			100% 0%/32px 32px no-repeat,
+		radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 27px, transparent 27px)
+			0% 100%/32px 32px no-repeat,
+		radial-gradient(circle at 0 0, #ffffff 0, #ffffff 27px, transparent 27px)
+			100% 100%/32px 32px no-repeat,
 		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 10px)
 			calc(100% - 60px) no-repeat,
 		linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 60px)
@@ -54,7 +54,7 @@
 			rgba(123, 94, 146, 1) 65%,
 			rgba(51, 6, 86, 1) 100%
 		);
-	border-radius: 27px;
+	border-radius: 31px;
 	padding: 5px;
 	box-sizing: border-box;
 }
