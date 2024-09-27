@@ -26,6 +26,8 @@ html {
 	width: clamp(180px, 95%, 1222px);
 	margin: 1.5rem auto;
 	background-color: white;
+	overflow: hidden;
+	/* border-radius: px; */
 }
 
 /* for any <element> inner-box padding */
@@ -35,6 +37,7 @@ html {
 	gap: 1.5rem;
 	width: clamp(200px, 100%, 1222px);
 	padding: max(2%, 16px) max(10%, 3rem);
+	/* overflow-y: hidden; */
 }
 
 header {
@@ -115,10 +118,25 @@ a {
 
 .institutions {
 	display: grid;
-	grid-template-columns: 3rem 2px 1fr 2px 3rem;
+	grid-template-columns: 3rem 1fr 3rem;
 	align-items: center;
-
-	gap: 1rem;
+	gap: min(3rem, 5%);
+	position: relative;
+}
+/* draw violet lines */
+.institutions::before,
+.institutions::after {
+	content: '';
+	position: absolute;
+	background-color: rgba(176, 76, 255, 1);
+	width: 1px;
+	height: 70px;
+}
+.institutions::before {
+	left: calc(3rem + 0.5rem);
+}
+.institutions::after {
+	right: calc(3rem + 0.5rem);
 }
 
 a:active .institutions {
@@ -127,12 +145,6 @@ a:active .institutions {
 a:hover .institutions {
 	color: orange;
 	transition: all 0.4s;
-	transform: scale(101%);
-}
-
-.institutions hr {
-	height: 100%;
-	color: rgba(176, 76, 255, 0.48);
 }
 
 @media (max-width: 1120px) {

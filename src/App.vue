@@ -35,16 +35,18 @@
 			style="padding: 2rem 0"
 			class="monda-700 container border-gradient"
 		>
-			<div class="content" v-for="el in institutions" :key="el.name">
-				<a href="">
-					<div class="institutions">
-						<span>{{ el.class }}</span>
-						<hr />
-						<span>{{ el.name }}</span>
-						<hr />
-						<span><img src="/public/icons/orange-book.png" alt="ico" /></span>
-					</div>
-				</a>
+			<div class="content">
+				<div class="" v-for="el in institutions" :key="el.name">
+					<a href="">
+						<div class="institutions">
+							<span>{{ el.class }}</span>
+							<!-- <hr /> -->
+							<span>{{ el.name }}</span>
+							<!-- <hr /> -->
+							<span><img src="/public/icons/orange-book.png" alt="ico" /></span>
+						</div>
+					</a>
+				</div>
 			</div>
 		</section>
 	</main>
