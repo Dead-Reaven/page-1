@@ -18,6 +18,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	padding-top: 5rem;
 }
 
 /* for <section> out-box margin */
@@ -37,7 +38,8 @@ html {
 }
 
 header {
-	position: relative;
+	position: fixed;
+	width: 100%;
 	color: white;
 	font-size: 0.9rem;
 	line-height: 1rem;
@@ -59,7 +61,7 @@ header .container {
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	/* opacity: 0.69; */
+	opacity: 0.69;
 	object-fit: cover;
 	object-position: center;
 }
@@ -115,8 +117,7 @@ a {
 	display: grid;
 	grid-template-columns: 3rem 2px 1fr 2px 3rem;
 	align-items: center;
-	/* justify-items: center; */
-	/* overflow-y: hidden; */
+
 	gap: 1rem;
 }
 
@@ -131,9 +132,7 @@ a:hover .institutions {
 
 .institutions hr {
 	height: 100%;
-
 	color: rgba(176, 76, 255, 0.48);
-	/* height: 1000px; */
 }
 
 @media (max-width: 1120px) {
