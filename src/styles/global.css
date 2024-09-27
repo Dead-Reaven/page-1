@@ -2,31 +2,40 @@
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
-	opacity: 1;
 }
 html {
 	min-height: 100vh;
 	width: 100vw;
 	height: 100vh;
+	/* by default 1rem is 16px */
 	font-size: 16px;
 	overflow-x: hidden;
 	position: relative;
 }
-.content {
-	width: clamp(180px, 95%, 1222px);
-	margin: 1.5rem auto;
-
-	background-color: white;
-}
-
-main {
+/* for wrap section elements */
+.wrapper {
 	position: relative;
-	width: 100vw;
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 }
+
+/* for <section> out-box margin */
+.container {
+	width: clamp(180px, 95%, 1222px);
+	margin: 1.5rem auto;
+	background-color: white;
+}
+
+/* for any <element> inner-box padding */
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	width: clamp(200px, 100%, 1222px);
+	padding: max(2%, 16px) max(10%, 3rem);
+}
+
 header {
 	position: relative;
 	color: white;
@@ -36,7 +45,8 @@ header {
 	z-index: 10;
 	background: rgba(34, 28, 231, 1);
 }
-header .content {
+
+header .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -54,14 +64,6 @@ header .content {
 	object-position: center;
 }
 
-nav {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-	width: clamp(200px, 100%, 1222px);
-	padding: max(2%, 16px) max(10%, 3rem);
-}
-
 .nav_header {
 	display: flex;
 	align-items: center;
@@ -73,43 +75,67 @@ nav {
 	height: clamp(70px, 21.5%, 153px);
 }
 
-/* for buttons */
+/* grid container */
 .nav_links {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
 }
-
-.nav_links a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	max-width: clamp(150px, 100%, 350px);
+a {
 	text-decoration: none;
+	color: rgba(88, 88, 88, 1);
 }
 
-.nav_links button {
-	width: 100%;
-	height: 100%;
-	max-height: 100%;
+/* grid item */
+.nav_links a {
+	padding: 1.4rem;
+	max-width: clamp(150px, 100%, 350px);
+}
+
+.btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
-	padding: 1.4rem;
 
+	font-size: 1.4rem;
 	border-radius: 4px;
+	text-wrap: nowrap;
 	border: 1px solid rgba(255, 255, 255, 0.251);
 	cursor: pointer;
-	text-wrap: nowrap;
-	font-size: 1.4rem;
 }
-/* for icons */
-button img {
+
+.btn img {
 	width: 20px;
 	height: 20px;
 }
+
+.institutions {
+	display: grid;
+	grid-template-columns: 3rem 2px 1fr 2px 3rem;
+	align-items: center;
+	/* justify-items: center; */
+	/* overflow-y: hidden; */
+	gap: 1rem;
+}
+
+a:active .institutions {
+	color: rgba(150, 150, 150, 1);
+}
+a:hover .institutions {
+	color: orange;
+	transition: all 0.4s;
+	transform: scale(101%);
+}
+
+.institutions hr {
+	height: 100%;
+
+	color: rgba(176, 76, 255, 0.48);
+	/* height: 1000px; */
+}
+
 @media (max-width: 1120px) {
 	:root {
 		font-size: 12px;
