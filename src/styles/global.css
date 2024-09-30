@@ -3,40 +3,18 @@
 	margin: 0px;
 	box-sizing: border-box;
 }
+:root {
+	/* by default 1rem is 16px */
+	font-size: 16px;
+	/* for background opacity */
+	--alpha-bg: 0.6;
+}
+
 html {
 	min-height: 100vh;
 	width: 100vw;
 	height: 100vh;
-	/* by default 1rem is 16px */
-	font-size: 16px;
 	overflow-x: hidden;
-	position: relative;
-}
-/* for wrap section elements */
-.wrapper {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	padding-top: 5rem;
-}
-
-/* for <section> out-box margin */
-.container {
-	width: clamp(180px, 95%, 1222px);
-	margin: 1.5rem auto;
-	background-color: white;
-	overflow: hidden;
-	/* border-radius: px; */
-}
-
-/* for any <element> inner-box padding */
-.content {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-	width: clamp(200px, 100%, 1222px);
-	padding: max(2%, 16px) clamp(16px, calc(15% - 4rem), 120px);
 }
 
 header {
@@ -55,6 +33,85 @@ header .container {
 	justify-content: center;
 	align-items: center;
 	background: rgba(34, 28, 231, 1) !important;
+}
+
+/* typography */
+h1,
+.nav_header_greet {
+	font-family: 'K2D', sans-serif;
+	font-weight: 800;
+
+	font-size: min(calc(1% + 1.9rem), 45px);
+	line-height: min(calc(1% + 1.9rem), 45px);
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: rgba(88, 88, 88, 1);
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.4rem;
+
+	font-size: 1.4rem;
+	border-radius: 4px;
+	text-wrap: nowrap;
+	border: 1px solid rgba(255, 255, 255, 0.251);
+	cursor: pointer;
+}
+
+.btn img {
+	width: 20px;
+	height: 20px;
+}
+/* typography */
+
+/* for wrap section elements */
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	overflow-y: auto;
+	gap: 2rem;
+	padding-top: 5rem;
+	background: url('/public/assets/hero.png') no-repeat center / cover;
+}
+
+.wrapper::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(255, 255, 255, var(--alpha-bg));
+	pointer-events: none; /* Allow interaction with elements below */
+}
+
+/* for <section> out-box margin */
+.container {
+	width: clamp(180px, 95%, 1222px);
+	margin: 1.5rem auto;
+	background-color: white;
+	position: relative; /* Make sure other elements stay on top of the background */
+	z-index: 1; /* Keep the content above the overlay */
+}
+
+/* for any <element> inner-box padding */
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	width: clamp(200px, 100%, 1222px);
+	padding: max(2%, 16px) clamp(16px, calc(15% - 4rem), 120px);
 }
 
 .bg {
@@ -85,33 +142,6 @@ header .container {
 	gap: 1rem;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
-}
-a {
-	text-decoration: none;
-	color: rgba(88, 88, 88, 1);
-}
-
-.nav_links a:first-child::after {
-	content: 'Методичні рекомендації';
-}
-
-.btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-	padding: 1.4rem;
-
-	font-size: 1.4rem;
-	border-radius: 4px;
-	text-wrap: nowrap;
-	border: 1px solid rgba(255, 255, 255, 0.251);
-	cursor: pointer;
-}
-
-.btn img {
-	width: 20px;
-	height: 20px;
 }
 
 .institutions {
@@ -158,10 +188,8 @@ a:hover .institutions {
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(3, 100%);
 	}
-	.nav_links a:first-child::after {
-		content: 'Рекомендації';
-	}
-	h1 {
+
+	.nav_header_greet {
 		text-align: left !important;
 	}
 
