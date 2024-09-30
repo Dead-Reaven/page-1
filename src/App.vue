@@ -23,7 +23,7 @@
 				<div class="nav_links">
 					<a class="btn active-red k2d-700" href="#">
 						<img src="/public/icons/check-ico.png" alt="" />
-						Методичні рекомендації
+						<!-- Методичні рекомендації -->
 					</a>
 					<a class="btn green k2d-700" href="#">Промо</a>
 					<a class="btn violet k2d-700" href="#">Quiz</a>

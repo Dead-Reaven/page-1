@@ -36,8 +36,7 @@ html {
 	flex-direction: column;
 	gap: 1.5rem;
 	width: clamp(200px, 100%, 1222px);
-	padding: max(2%, 16px) max(10%, 3rem);
-	/* overflow-y: hidden; */
+	padding: max(2%, 16px) clamp(16px, calc(15% - 4rem), 120px);
 }
 
 header {
@@ -92,10 +91,8 @@ a {
 	color: rgba(88, 88, 88, 1);
 }
 
-/* grid item */
-.nav_links a {
-	padding: 1.4rem;
-	max-width: clamp(150px, 100%, 350px);
+.nav_links a:first-child::after {
+	content: 'Методичні рекомендації';
 }
 
 .btn {
@@ -103,6 +100,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
+	padding: 1.4rem;
 
 	font-size: 1.4rem;
 	border-radius: 4px;
@@ -157,18 +155,12 @@ a:hover .institutions {
 		font-size: 10px;
 	}
 	.nav_links {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(3, 100%);
 	}
-	.nav_links a:first-child {
-		grid-column: span 3 / span 3;
-		grid-row-start: 1;
-		max-width: none;
+	.nav_links a:first-child::after {
+		content: 'Рекомендації';
 	}
-	.nav_links a {
-		grid-row-start: 2;
-	}
-
 	h1 {
 		text-align: left !important;
 	}
